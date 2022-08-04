@@ -24,6 +24,7 @@ export interface Breeds{
     name: string
     temperament: string
     origin:string
+    country_code:string
     description: string
     adaptability: number
     affection_level: number

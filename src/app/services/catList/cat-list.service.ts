@@ -12,7 +12,7 @@ export class CatListService {
 
   constructor(private http: HttpClient) { }
 
-  getData():Observable<any>{
+  getDataBreed():Observable<any>{
     return this.http.get(`https://api.thecatapi.com/v1/breeds?limit=30`)
   }
 }

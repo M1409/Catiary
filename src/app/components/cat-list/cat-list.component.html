@@ -1,4 +1,6 @@
-<div *ngFor = 'let cat of catList'>
+<div *ngFor = 'let cat of catList' (click) = 'teste(cat.id)'>
     <p> {{cat.name}}</p>
     <img src={{cat.image.url}} alt="" [ngStyle] = "{'width': '380px'}">
+    <img src={{countryUrl(cat.country_code)}}  alt="">
+    <p> {{cat.origin}}</p>
 </div>
