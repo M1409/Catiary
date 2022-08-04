@@ -1,4 +1,4 @@
 <div *ngFor = 'let cat of catList'>
-    <img src={{cat.url}} alt="">
-    <p>{{cat.breeds[0].name}}</p>
+    <p> {{cat.name}}</p>
+    <img src={{cat.image.url}} alt="" [ngStyle] = "{'width': '380px'}">
 </div>

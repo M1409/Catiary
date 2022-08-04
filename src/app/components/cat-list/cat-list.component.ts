@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatListService } from '../../services/catList/cat-list.service';
-import { Cat } from 'src/app/Interfaces/Cat';
+import { Cat, Breeds } from 'src/app/Interfaces/Cat';
 
 @Component({
   selector: 'app-cat-list',
@@ -11,12 +11,13 @@ export class CatListComponent implements OnInit {
 
   constructor(private _CatListService: CatListService) { }
 
-  catList:Cat[] = []
+  catList:Breeds[] = []
   
   ngOnInit(): void {
 
     this._CatListService.getData().subscribe(data=>{
       this.catList = data
+      console.log(this.catList)
     }
 
     )
