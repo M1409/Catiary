@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CatListComponent } from './components/cat-list/cat-list.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
+import { CatListService } from '../app/services/catList/cat-list.service'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CatListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CatListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
