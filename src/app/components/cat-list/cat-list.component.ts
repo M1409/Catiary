@@ -29,9 +29,7 @@ export class CatListComponent implements OnInit {
       sub_id: 'user123',
     }
 
-    this._CatListService.postFavorite(opost).subscribe(data=>{
-      
-    })
+    this._CatListService.postFavorite(opost).subscribe()
     
   }
   

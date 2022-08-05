@@ -29,8 +29,6 @@ export class FavListComponent implements OnInit {
 
   }
 
-
-
   ngOnInit(): void {
     this.generateFavorites()
   }
