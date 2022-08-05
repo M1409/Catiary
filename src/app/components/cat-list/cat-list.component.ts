@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CatListService } from '../../services/catList/cat-list.service';
-import { Cat, Breeds } from 'src/app/Interfaces/Cat';
+import {Breeds, postFavorites} from 'src/app/Interfaces/Cat';
+import { CatFavoritesService } from 'src/app/services/catFavorites/cat-favorites.service';
 
 
 @Component({
@@ -14,14 +15,24 @@ export class CatListComponent implements OnInit {
 
   catList:Breeds[] = []
   idList:string[] = []
+  imageId:string = ''
+
   
   countryUrl(flag:string):any{
     return `https://countryflagsapi.com/png/${flag}`
   }
 
-  teste(a:any){
-    alert(a)
+  getImageId(imageid:string){
+    this.imageId = imageid
+    var opost:postFavorites = {
+      image_id: this.imageId,
+      sub_id: 'user123',
+    }
 
+    this._CatListService.postFavorite(opost).subscribe(data=>{
+      
+    })
+    
   }
   
   ngOnInit(): void {
@@ -33,6 +44,10 @@ export class CatListComponent implements OnInit {
     )
 
 
+
+
   }
+
+
 
 }

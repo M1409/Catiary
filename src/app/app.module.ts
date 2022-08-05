@@ -9,15 +9,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { CatcardComponent } from './components/catcard/catcard.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component'
 import {MatCardModule} from '@angular/material/card';
+import { CatFavoritesService } from './services/catFavorites/cat-favorites.service';
 
 
 import { HomeModule } from './Pages/home/home.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CatcardComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { HomeModule } from './Pages/home/home.module';
     MatCardModule,
     HomeModule,
   ],
-  providers: [],
+  providers: [CatFavoritesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

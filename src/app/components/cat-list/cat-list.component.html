@@ -1,6 +1,7 @@
-<div *ngFor = 'let cat of catList' (click) = 'teste(cat.id)'>
+<div *ngFor = 'let cat of catList'>
     <p> {{cat.name}}</p>
     <img src={{cat.image.url}} alt="" [ngStyle] = "{'width': '380px'}">
     <img src={{countryUrl(cat.country_code)}}  alt="">
     <p> {{cat.origin}}</p>
+    <button (click) = 'getImageId(cat.image.id)'> Favoritar </button>
 </div>

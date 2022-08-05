@@ -1,0 +1,6 @@
+<h2> Favoritos </h2>
+
+<div *ngFor="let fav of favoriteList">
+    <img src={{fav.image.url}} alt="">
+    <button (click)="deleteFavorite(fav.id)"> delete </button>
+</div>
