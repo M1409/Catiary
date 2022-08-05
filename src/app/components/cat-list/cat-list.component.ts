@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CatListService } from '../../services/catList/cat-list.service';
 import {Breeds, postFavorites} from 'src/app/Interfaces/Cat';
-import { CatFavoritesService } from 'src/app/services/catFavorites/cat-favorites.service';
 
 
 @Component({

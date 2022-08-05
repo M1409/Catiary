@@ -11,8 +11,9 @@ import { AutocompleteComponent } from './components/autocomplete/autocomplete.co
 import {MatCardModule} from '@angular/material/card';
 import { CatFavoritesService } from './services/catFavorites/cat-favorites.service';
 
-
 import { HomeModule } from './Pages/home/home.module';
+import { FavoritesModule } from './Pages/favorites/favorites.module';
+
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { HomeModule } from './Pages/home/home.module';
     HttpClientModule,
     MatCardModule,
     HomeModule,
+    FavoritesModule
   ],
   providers: [CatFavoritesService],
   bootstrap: [AppComponent]
