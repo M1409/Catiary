@@ -11,7 +11,9 @@ import {MatCardModule} from '@angular/material/card';
 import { CatFavoritesService } from './services/catFavorites/cat-favorites.service';
 
 import { HomeModule } from './Pages/home/home.module';
+import { HomeRoutingModule } from './Pages/home/home-routing.module';
 import { FavoritesModule } from './Pages/favorites/favorites.module';
+import { FavoritesRoutingModule } from './Pages/favorites/favorites-routing.module'
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { FavoritesModule } from './Pages/favorites/favorites.module';
     HttpClientModule,
     MatCardModule,
     HomeModule,
-    FavoritesModule
+    FavoritesModule,
+    HomeRoutingModule,
+    FavoritesRoutingModule
   ],
   providers: [CatFavoritesService],
   bootstrap: [AppComponent]
