@@ -14,6 +14,7 @@ import { HomeModule } from './Pages/home/home.module';
 import { HomeRoutingModule } from './Pages/home/home-routing.module';
 import { FavoritesModule } from './Pages/favorites/favorites.module';
 import { FavoritesRoutingModule } from './Pages/favorites/favorites-routing.module'
+import { CatInfoRoutingModule } from './Pages/cat-info/cat-info-routing.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FavoritesRoutingModule } from './Pages/favorites/favorites-routing.modu
     HomeModule,
     FavoritesModule,
     HomeRoutingModule,
-    FavoritesRoutingModule
+    FavoritesRoutingModule,
+    CatInfoRoutingModule
   ],
   providers: [CatFavoritesService],
   bootstrap: [AppComponent]
