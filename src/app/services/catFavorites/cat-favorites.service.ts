@@ -19,8 +19,6 @@ export class CatFavoritesService {
 
   options = { headers: this.headers }
 
-  
-
   constructor(private http: HttpClient) { }
 
   getFavorites():Observable<any>{

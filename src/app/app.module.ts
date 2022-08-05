@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import { CatcardComponent } from './components/catcard/catcard.component';
-import { AutocompleteComponent } from './components/autocomplete/autocomplete.component'
 import {MatCardModule} from '@angular/material/card';
 import { CatFavoritesService } from './services/catFavorites/cat-favorites.service';
 
@@ -15,12 +14,10 @@ import { HomeModule } from './Pages/home/home.module';
 import { FavoritesModule } from './Pages/favorites/favorites.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     CatcardComponent,
-    AutocompleteComponent,
   ],
   imports: [
     BrowserModule,
