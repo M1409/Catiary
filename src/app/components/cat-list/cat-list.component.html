@@ -1,5 +1,5 @@
 <section *ngFor="let cat of catList">
-    <mat-card>
+    <mat-card class = 'cat-card'>
         <mat-card-header>
             <img src={{countryUrl(cat.country_code)}} mat-card-avatar class="example-header-image" alt="">
             <mat-card-title>{{cat.name}}</mat-card-title>
@@ -13,10 +13,6 @@
             {{cat.description}}
             </p>
         </mat-card-content>
-        <!-- <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions> -->
     </mat-card>
 </section>
 

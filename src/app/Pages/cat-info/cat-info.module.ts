@@ -6,17 +6,19 @@ import { CatInfoRoutingModule } from './cat-info-routing.module';
 import { CatInfoComponent } from './cat-info.component';
 import { CatCardComponent } from 'src/app/components/cat-card/cat-card.component';
 import { CatInfoService } from 'src/app/services/catInfo/cat-info.service';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 @NgModule({
   declarations: [
     CatInfoComponent,
-    CatCardComponent
+    CatCardComponent,
   ],
   imports: [
     CommonModule,
     CatInfoRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    NgApexchartsModule
 
   ],
   providers:[CatInfoService]

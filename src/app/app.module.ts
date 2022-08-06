@@ -13,10 +13,12 @@ import { FavoritesModule } from './Pages/favorites/favorites.module';
 '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from 
 '@angular/platform-browser/animations';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import {Breeds, postFavorites} from 'src/app/Interfaces/Cat';
 @Component({
   selector: 'app-cat-list',
   templateUrl: './cat-list.component.html',
-  styleUrls: ['./cat-list.component.sass']
+  styleUrls: ['./cat-list.component.css']
 })
 export class CatListComponent implements OnInit {
 
