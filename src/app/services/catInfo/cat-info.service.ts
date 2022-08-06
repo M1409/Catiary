@@ -11,7 +11,7 @@ export class CatInfoService {
   constructor(private http: HttpClient) { }
 
   getCatInfo(id:string | null):Observable<any>{
-    return this.http.get(`https://api.thecatapi.com/v1/breeds/search?q=${id}`)
+    return this.http.get(`https://api.thecatapi.com/v1/breeds/${id}`)
   }
 
   getCatImage(id:string | null):Observable<any>{

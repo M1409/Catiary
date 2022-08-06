@@ -1,21 +1,17 @@
-
-<div *ngFor="let info of catInfo">
-
-    <p> {{info.name}}</p>
-    <p> {{info.temperament}}</p>
-
-    
+<div>
+    <p> {{catInfo.name}}</p>
+    <p> {{catInfo.temperament}}</p>
 
     <mat-tab-group mat-align-tabs="start">
-        <mat-tab label="Descrição"> {{info.description}}</mat-tab>
+        <mat-tab label="Descrição"> {{catInfo.description}}</mat-tab>
         <mat-tab label="Características">
             <div>
-                
+
             </div>
         </mat-tab>
         <mat-tab label="Third">Content 3</mat-tab>
     </mat-tab-group>
-</div>
+</div>  
 
 
 
