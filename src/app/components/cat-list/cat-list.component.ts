@@ -3,6 +3,7 @@ import { CatListService } from '../../services/catList/cat-list.service';
 import {Breeds, postFavorites} from 'src/app/Interfaces/Cat';
 
 
+
 @Component({
   selector: 'app-cat-list',
   templateUrl: './cat-list.component.html',
@@ -39,12 +40,6 @@ export class CatListComponent implements OnInit {
     }
 
     )
-
-
-
-
   }
-
-
 
 }

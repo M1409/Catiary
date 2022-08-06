@@ -6,21 +6,17 @@ import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
-import { CatcardComponent } from './components/catcard/catcard.component';
 import {MatCardModule} from '@angular/material/card';
-import { CatFavoritesService } from './services/catFavorites/cat-favorites.service';
 
 import { HomeModule } from './Pages/home/home.module';
-import { HomeRoutingModule } from './Pages/home/home-routing.module';
 import { FavoritesModule } from './Pages/favorites/favorites.module';
-import { FavoritesRoutingModule } from './Pages/favorites/favorites-routing.module'
-import { CatInfoRoutingModule } from './Pages/cat-info/cat-info-routing.module';
-
+'@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from 
+'@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatcardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,11 +25,9 @@ import { CatInfoRoutingModule } from './Pages/cat-info/cat-info-routing.module';
     MatCardModule,
     HomeModule,
     FavoritesModule,
-    HomeRoutingModule,
-    FavoritesRoutingModule,
-    CatInfoRoutingModule
+    BrowserAnimationsModule,
   ],
-  providers: [CatFavoritesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
