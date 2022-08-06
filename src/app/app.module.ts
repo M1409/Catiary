@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from
 '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

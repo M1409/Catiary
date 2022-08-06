@@ -1,22 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { CatInfoService } from 'src/app/services/catInfo/cat-info.service';
 import { catInfo, catImage } from 'src/app/Interfaces/Cat';
-
-import {
-  ApexAxisChartSeries,
-  ApexTitleSubtitle,
-  ApexChart,
-  ApexXAxis,
-  ChartComponent
-} from "ng-apexcharts";
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  title: ApexTitleSubtitle;
-  xaxis: ApexXAxis;
-};
 
 
 @Component({
@@ -26,21 +11,12 @@ export type ChartOptions = {
 })
 export class CatCardComponent implements OnInit {
 
-  @ViewChild("chart") chart: ChartComponent
-
-  public chartOptions: Partial<ChartOptions> | any;
-
   id:string | null = ''
 
   catInfo:catInfo 
 
-  chartData:number[]
-  numero:any = 1
-
-  
-
   catImage:catImage[] = []	
-  
+
   constructor(private route: ActivatedRoute, private _CatInfoService:CatInfoService) { }
 
   
@@ -65,26 +41,6 @@ export class CatCardComponent implements OnInit {
         stranger_friendly: data.stranger_friendly
     }
 
-    this.chartData= [this.catInfo.adaptability,this.catInfo.affection_level,this.catInfo.child_friendly, this.catInfo.social_needs, this.catInfo.stranger_friendly,this.catInfo.health_issues]
-
-    this.chartOptions = {
-      series: [
-        {
-          // data: [this.catInfo.adaptability,this.catInfo.affection_level,this.catInfo.child_friendly,this.catInfo.cat_friendly,this.catInfo.health_issues,this.catInfo.intelligence]
-          data:this.chartData
-        }
-      ],
-      chart: {
-        height: 350,
-        type: "radar"
-      },
-      title: {
-        text: "Basic Radar Chart"
-      },
-      xaxis: {
-        categories: ["Adaptação","Nível de Afeição", "Proximidade com Crianças", "Necessidades Sociais", "Proximidade com Estranhos", "Inteligência"]
-      }
-    };
   })
 
   
