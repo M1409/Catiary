@@ -1,17 +1,20 @@
-<section *ngFor="let cat of catList">
-    <mat-card class = 'cat-card'>
+<section  class="cat-container">
+    <mat-card class = 'cat-card' *ngFor="let cat of catList">
         <mat-card-header>
             <img src={{countryUrl(cat.country_code)}} mat-card-avatar class="example-header-image" alt="">
             <mat-card-title>{{cat.name}}</mat-card-title>
             <mat-card-subtitle>{{cat.origin}}</mat-card-subtitle>
         </mat-card-header>
-        <img  src={{cat.image.url}} alt="">
-        <button (click) = 'getImageId(cat.image.id)'> Favoritar </button>
-        <button [routerLink]="['/catinfo', cat.id]"> ver mais </button>
-        <mat-card-content>
+        <div class="cat-img-container">
+            <img class="cat-img"  src={{cat.image.url}} alt="">
+            <button (click) = 'getImageId(cat.image.id)' class="fav-button"> Favoritar </button>
+        </div>
+
+        <mat-card-content class="cat-content">
             <p>
             {{cat.description}}
             </p>
+            <a [routerLink]="['/catinfo', cat.id]"> Ver mais</a>
         </mat-card-content>
     </mat-card>
 </section>

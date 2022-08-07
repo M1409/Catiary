@@ -20,7 +20,7 @@ export type ChartOptions = {
 @Component({
   selector: 'app-radarchart',
   templateUrl: './radarchart.component.html',
-  styleUrls: ['./radarchart.component.sass']
+  styleUrls: ['./radarchart.component.css']
 })
 export class RadarchartComponent implements OnInit {
 
@@ -57,7 +57,7 @@ export class RadarchartComponent implements OnInit {
         }
       },
       xaxis: {
-        categories: ["Adaptação","Nível de Afeição", "Proximidade com Crianças", "Necessidades Sociais", "Proximidade com Estranhos", "Inteligência"]
+        categories: ["Adaptability","Affection Level", "Child Friendly", "Social Needs", "Stranger Friendly", "Intelligence"]
       },
     };
   }

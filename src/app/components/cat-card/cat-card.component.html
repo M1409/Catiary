@@ -1,2 +1,23 @@
+<mat-card  *ngFor="let image of catImage"  >
+    <mat-card-header>
+        <img src={{countryUrl(catInfo.country_code)}} mat-card-avatar class="example-header-image" alt="">
+        <mat-card-title>{{catInfo.name}}</mat-card-title>
+        <mat-card-subtitle>{{catInfo.origin}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{image.url}}" alt="Photo of a Shiba Inu">
+</mat-card>
 
-<app-radarchart [adaptability] = "catInfo.adaptability" [affection_level] = "catInfo.affection_level" [child_friendly] = "catInfo.child_friendly" [social_needs] = "catInfo.social_needs" [stranger_friendly] = "catInfo.stranger_friendly" [intelligence] = "catInfo.intelligence" ></app-radarchart>
+
+<mat-tab-group>
+    <mat-tab label="Estatísticas"> 
+        <app-radarchart [adaptability] = "catInfo.adaptability" [affection_level] = "catInfo.affection_level" [child_friendly] = "catInfo.child_friendly" [social_needs] = "catInfo.social_needs" [stranger_friendly] = "catInfo.stranger_friendly" [intelligence] = "catInfo.intelligence" ></app-radarchart>
+    </mat-tab>
+    <mat-tab label="Description">  
+        <p> {{catInfo.temperament}}</p>
+        <p> {{catInfo.description}}</p>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+

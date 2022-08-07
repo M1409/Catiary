@@ -8,6 +8,7 @@ import { CatCardComponent } from 'src/app/components/cat-card/cat-card.component
 import { CatInfoService } from 'src/app/services/catInfo/cat-info.service';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { RadarchartComponent } from 'src/app/components/radarchart/radarchart.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -20,8 +21,8 @@ import { RadarchartComponent } from 'src/app/components/radarchart/radarchart.co
     CommonModule,
     CatInfoRoutingModule,
     MatTabsModule,
+    MatCardModule,
     NgApexchartsModule
-
   ],
   providers:[CatInfoService]
 })

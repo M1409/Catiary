@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { CatListComponent } from '../../components/cat-list/cat-list.component';
 import { CatListService } from '../../services/catList/cat-list.service';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
 
   exports:[

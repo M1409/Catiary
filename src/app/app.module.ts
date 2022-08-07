@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from
 import { NavComponent } from './components/nav/nav.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { NavComponent } from './components/nav/nav.component';
     HomeModule,
     FavoritesModule,
     BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,12 +15,15 @@ export class CatCardComponent implements OnInit {
 
   catInfo:catInfo 
 
-  catImage:catImage[] = []	
+  catImage:catImage[]
 
   constructor(private route: ActivatedRoute, private _CatInfoService:CatInfoService) { }
 
-  
+  countryUrl(flag:string):any{
+    return `https://countryflagsapi.com/png/${flag}`
+  }
 
+  
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')
 
@@ -43,7 +46,6 @@ export class CatCardComponent implements OnInit {
 
   })
 
-  
     this._CatInfoService.getCatImage(this.id).subscribe(image =>{
       this.catImage = image
     })

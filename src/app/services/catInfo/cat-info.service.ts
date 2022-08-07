@@ -15,7 +15,7 @@ export class CatInfoService {
   }
 
   getCatImage(id:string | null):Observable<any>{
-    return this.http.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${id}&limit=5`)
+    return this.http.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${id}`)
   }
 
 }
