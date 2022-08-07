@@ -7,7 +7,7 @@ import { catInfo, catImage } from 'src/app/Interfaces/Cat';
 @Component({
   selector: 'app-cat-card',
   templateUrl: './cat-card.component.html',
-  styleUrls: ['./cat-card.component.sass']
+  styleUrls: ['./cat-card.component.css']
 })
 export class CatCardComponent implements OnInit {
 
@@ -17,13 +17,15 @@ export class CatCardComponent implements OnInit {
 
   catImage:catImage[]
 
+  imageId:string = ''
+
   constructor(private route: ActivatedRoute, private _CatInfoService:CatInfoService) { }
 
   countryUrl(flag:string):any{
     return `https://countryflagsapi.com/png/${flag}`
   }
 
-  
+
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')
 

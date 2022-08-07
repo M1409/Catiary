@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CatListService } from '../../services/catList/cat-list.service';
 import {Breeds, postFavorites} from 'src/app/Interfaces/Cat';
 
@@ -30,7 +30,6 @@ export class CatListComponent implements OnInit {
     }
 
     this._CatListService.postFavorite(opost).subscribe()
-    
   }
   
   ngOnInit(): void {
