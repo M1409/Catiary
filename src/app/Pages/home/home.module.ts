@@ -7,18 +7,21 @@ import { CatListComponent } from '../../components/cat-list/cat-list.component';
 import { CatListService } from '../../services/catList/cat-list.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { SnackbarComponent } from '../../components/snackbar/snackbar.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     CatListComponent,
+    SnackbarComponent
+
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
   ],
 
   exports:[

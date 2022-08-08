@@ -5,35 +5,45 @@
     justify-content: space-between;
     margin: 0 auto;
     
-
 }
 .cat-card{
     width: 506px;
     height: 630px;
     margin-bottom: 40px;
+    background-color: #F3D5A5;
 }
 
 .cat-img{
     width: 100%;
     height: 371px;
+    object-fit: cover;
 }
 
 .cat-card p{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
     margin-top: 10px;
+    font-weight: 500;
 }
 
+
 .cat-card a{
-    color: green;
+    color: #473112;
     position: absolute;
     top: 150px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
 }
 
 .fav-button{
     position: absolute;
-    top: 0;
+    top: 10;
     right: 0;
+    color: #FFBC16;
+}
+
+.fav-button:hover{
+    transform: scale(1.3);
 }
 
 .cat-img-container{
